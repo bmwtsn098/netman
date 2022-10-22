@@ -15,6 +15,11 @@ func mayhemit(bytes []byte) int {
 
     switch num {
 
+    case 0:
+        var test server.BaseConnect
+        test.Write(bytes)
+        return 0
+
     case 1:
         content := string(bytes)
         server.WithTls("mayhem", content)
